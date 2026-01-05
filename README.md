@@ -1,5 +1,5 @@
 # Econchamber
-Compilation of python files that make up a simple app that educates users about various aspects of economics
+Compilation of python files that make up a simple app that educates users about various aspects of economics and utilizes an API to show the user updates on information relevant to economics in real time
 
 Prior to installation, ensure you have the lastest version of python installed in your terminal
 
