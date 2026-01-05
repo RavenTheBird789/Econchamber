@@ -10,10 +10,13 @@ import time
 import econsystems
 
 # Import list of different tax systems
-import taxsystems # type: ignore
+import taxsystems
 
 # Econchamber Tax Rate Formula Import
 import tax_rate
+
+# Econchamber US Debt Clock Import
+import US_Debt_Clock  # type: ignore
 
 def green(text: str) -> str: 
     # Wrap text in ANSI codes for green color
@@ -91,7 +94,8 @@ def options():
         "2. Find tax rate percentage after a purchase",
         "3. View different tax systems",
         "4. View different economic systems",
-        "5. Exit Econchamber",
+        "5. View the U.S. Debt Clock",
+        "6. Exit Econchamber",
     ]
     for opt in opts:
         print(green(opt));
@@ -116,6 +120,10 @@ def options():
         econsystems.list();
         user_prompt();
     elif user_choice == '5':
+        os.system('clear');
+        US_Debt_Clock.main();
+        user_prompt();
+    elif user_choice == '6':
         os.system('clear');
         print(green("Thank you for visiting the Econchamber! Goodbye!"));
         time.sleep(5);
