@@ -12,10 +12,10 @@ def green(text: str) -> str:
 
 # User question
 def Uques():
-    user_ques = input(green("Would you like to learn more? (yes/no): "));
-    if user_ques.lower == "yes" or user_ques.lower == "y" or user_ques.upper == "YES" or user_ques == "Yes":
-        list();
-    elif user_ques.lower == "no" or user_ques.lower == "n" or user_ques.upper == "NO" or user_ques == "No":
+    user_ques = input(green("Would you like to learn more? (yes/no): "))
+    if user_ques.lower() in ("yes", "y"):
+        list()
+    elif user_ques.lower() in ("no", "n"):
         print(green("Okay then, thanks for taking the time to learn!"))
 
 # Progressive Tax Definition
