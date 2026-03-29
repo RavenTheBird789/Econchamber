@@ -14,7 +14,8 @@ def green(text: str) -> str:
 def Uques():
     user_ques = input(green("Would you like to learn more? (yes/no): "))
     if user_ques.lower() in ("yes", "y"):
-        list()
+        os.system('clear');
+        list();
     elif user_ques.lower() in ("no", "n"):
         print(green("Okay then, thanks for taking the time to learn!"))
 
