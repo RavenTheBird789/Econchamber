@@ -1,5 +1,5 @@
 # Econchamber
-Compilation of python files that make up a simple app that educates users about various aspects of economics and utilizes an API to show the user updates on information relevant to economics in real time
+Combination of python files that make up an informative app that educates users about various aspects of economics and utilizes a U.S. Debt API to show the user updates on information relevant to economics in real time
 
 ![Alt text](Images/Screenshot.png)
 
