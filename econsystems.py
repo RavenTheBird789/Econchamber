@@ -1,9 +1,5 @@
 # Economic Systems List
-
-# Import OS module
 import os
-
-# Import time module
 import time
 
 def green(text: str) -> str: 
@@ -14,51 +10,51 @@ def green(text: str) -> str:
 def Uques():
     user_ques = input(green("Would you like to learn more? (yes/no): "))
     if user_ques.lower() in ("yes", "y"):
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         list();
     elif user_ques.lower() in ("no", "n"):
         print(green("Okay then, thanks for taking the time to learn!"))
 
 # Capitalism Definition
 def capitalism():
-    os.system('clear');
-    cap_def = "Capitalism is an economic system characterized by private ownership of the means of production and the creation of goods or services for profit. \nIn a capitalist economy, individuals and businesses operate in a competitive market, where prices are determined by supply and demand. \nThe role of the government is typically limited to regulation and protection of property rights."
+    os.system("cls" if os.name == 'nt' else 'clear');
+    cap_def = "Capitalism is an economic system characterized by private ownership of the means of production and the creation of goods or services for profit. In a capitalist economy, individuals and businesses operate in a competitive market, where prices are determined by supply and demand. The role of the government is typically limited to regulation and protection of property rights."
     print(green(cap_def));
 
 # Socialism Definition
 def socialism():
-    os.system('clear');
-    soc_def = "Socialism is an economic system where the means of production, distribution, and exchange are owned or regulated by the community as a whole, \noften through the government regulating the distribution of resources and wealth."
+    os.system("cls" if os.name == 'nt' else 'clear');
+    soc_def = "Socialism is an economic system where the means of production, distribution, and exchange are owned or regulated by the community as a whole, often through the government regulating the distribution of resources and wealth."
     print(green(soc_def));
 
 # Communism Definition
 def communism():
-    os.system('clear');
-    com_def = "Communism is a political and economic ideology advocating for a classless society in which all property and resources are communally owned, \nwith the aim of eliminating social inequalities and ensuring that wealth and power are distributed equally among all members of society."
+    os.system("cls" if os.name == 'nt' else 'clear');
+    com_def = "Communism is a political and economic ideology advocating for a classless society in which all property and resources are communally owned, with the aim of eliminating social inequalities and ensuring that wealth and power are distributed equally among all members of society."
     print(green(com_def));
 
 # Mixed Economy Definition
 def mixed_economy():
-    os.system('clear');
-    mix_def = "A mixed economy is an economic system that combines elements of both capitalism and socialism. \nIn a mixed economy, private enterprises operate alongside government intervention and regulation, \nallowing for a balance between market forces and social welfare."
+    os.system("cls" if os.name == 'nt' else 'clear');
+    mix_def = "A mixed economy is an economic system that combines elements of both capitalism and socialism. In a mixed economy, private enterprises operate alongside government intervention and regulation, allowing for a balance between market forces and social welfare."
     print(green(mix_def));
 
 # Traditional Economy Definition
 def traditional_economy():
-    os.system('clear');
-    trad_def = "A traditional economy is an economic system that relies on customs, traditions, and beliefs to shape the production and distribution of goods and services. \nIn a traditional economy, economic decisions are often based on historical practices and cultural norms, \nwith a focus on subsistence farming, hunting, and gathering."
+    os.system("cls" if os.name == 'nt' else 'clear');
+    trad_def = "A traditional economy is an economic system that relies on customs, traditions, and beliefs to shape the production and distribution of goods and services. In a traditional economy, economic decisions are often based on historical practices and cultural norms, with a focus on subsistence farming, hunting, and gathering."
     print(green(trad_def));
 
 # Command Economy Definition
 def command_economy():
-    os.system('clear');
-    cmd_def = "A command economy is an economic system where the government or central authority makes all decisions regarding the production and distribution of goods and services. \nIn a command economy, the government typically owns and controls the means of production, \nand economic activities are planned and directed by the state."
+    os.system("cls" if os.name == 'nt' else 'clear');
+    cmd_def = "A command economy is an economic system where the government or central authority makes all decisions regarding the production and distribution of goods and services. In a command economy, the government typically owns and controls the means of production, and economic activities are planned and directed by the state."
     print(green(cmd_def));
 
 # Market Economy Definition
 def market_economy():
-    os.system('clear');
-    mark_def = "A market economy is an economic system where economic decisions and the pricing of goods and services are guided by the interactions of citizens and businesses in a free market. \nIn a market economy, supply and demand determine production and distribution, with minimal government intervention."
+    os.system("cls" if os.name == 'nt' else 'clear');
+    mark_def = "A market economy is an economic system where economic decisions and the pricing of goods and services are guided by the interactions of citizens and businesses in a free market. In a market economy, supply and demand determine production and distribution, with minimal government intervention."
     print(green(mark_def));
 
 def list():
@@ -78,44 +74,44 @@ def list():
         print(green(system));
     dec = input(green("Which economic system would you like to learn about?: "));
     if dec == '1':
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         capitalism();
         time.sleep(1);
         Uques();
     elif dec == '2':
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         socialism();
         time.sleep(1);
         Uques();
     elif dec == '3':
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         communism();
         time.sleep(1);
         Uques();
     elif dec == '4':
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         mixed_economy();
         time.sleep(1);
         Uques();
     elif dec == '5':
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         traditional_economy();
         time.sleep(1);
         Uques();
     elif dec == '6':
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         command_economy();
         time.sleep(1);
         Uques();
     elif dec == '7':
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         market_economy();
         time.sleep(1);
         Uques();
     elif dec == '8':
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
     else:
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         print(green("Invalid option selected. Please choose a valid tax system number in: "));
         time.sleep(1);
         print(green("...3"))
@@ -124,5 +120,5 @@ def list():
         time.sleep(1);
         print(green("...1"))
         time.sleep(1);
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         list();

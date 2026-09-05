@@ -19,8 +19,8 @@ def tax_rate():
 
     formula = diff / initial_price * 100 # evaluate the tax percentage using this formula
     
-    mes = f"The current tax rate based on your purchase is {formula}"; # create message to show user the tax rate based on their purchase
-    print(green(mes + "%")); # show the user the current tax rate based on their purchase
+    mes = f"The current tax rate based on your purchase is {formula:.2f}"; # create message to show user the tax rate based on their purchase
+    print(green(mes + "%")); # show the user the current tax rate based on their purchase rounded 2 digits after the decimal point
     time.sleep(2);
-    print(green(bold("(Note: This is only an estimate of the tax rate based on your purchase and \nis an oversimplification that doesn't factor in all the information necessary \nto accurately calculate the tax rate.)")));
+    print(green(bold("(Note: This is only an estimate of the tax rate based on your purchase and is an oversimplification that doesn't factor in all the information necessary to accurately calculate the tax rate.)")));
     time.sleep(2);

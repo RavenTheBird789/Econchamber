@@ -1,26 +1,18 @@
 # Econchamber Source Code
-
-# Import os module
 import os
-
-# Import time module
 import time
-
-# Import list of different economic systems
 import econsystems
-
-# Import list of different tax systems
 import taxsystems
-
-# Econchamber Tax Rate Formula Import
 import tax_rate
-
-# Econchamber US Debt Clock Import
-import US_Debt_Clock  # type: ignore
+import US_Debt_Clock
 
 def green(text: str) -> str: 
     # Wrap text in ANSI codes for green color
     return f"\033[92m{text}\033[0m"
+
+def red(text: str) -> str: 
+    # Wrap text in ANSI codes for red color
+    return f"\033[91m{text}\033[0m"
 
 def bold(text: str) -> str: 
     # Wrap text in ANSI codes for bold formatting
@@ -35,57 +27,62 @@ def econ_def():
 def user_prompt():
     prompt = input(green("Would you like to return to the main menu? (yes/no): "));
     if prompt.lower() in ['yes', 'y']:
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         options();
     elif prompt.upper() in ['YES', 'Y']:
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         options();
     elif prompt == 'Yes':
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         options();
     elif prompt.lower() in ['no', 'n']:
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         print(green("Thank you for visiting the Econchamber! Goodbye!"));
         os.close(fd=0);
     elif prompt.upper() in ['NO', 'N']:
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         print(green("Thank you for visiting the Econchamber! Goodbye!"));
         os.close(fd=0);
     elif prompt == 'No':
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         print(green("Thank you for visiting the Econchamber! Goodbye!"));
         os.close(fd=0);
     else:
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         print(green("Thank you for visiting the Econchamber! Goodbye!"));
         os.close(fd=0);
 
-def main():
-    # Money Symbol
-    money = " $ "
+def main(func):
+    def wrapper():
+        # Money Symbol
+        money = " $ "
 
-    # Construct Econchamber Art
-    art = [
-        "  ___   ___   ____         ___         ___            ___   ___  ___",
-        " |     |     |    | |\\  | |    |    | |   | |\\    /| |   | |    |___| ",
-        " |---  | $   |    | | \\ | | ¢  |----| |---| | \\  / | |---  |--- |  \\",
-        " |___  |___  |____| |  \\| |___ |    | |   | |  \\/  | |___| |___ |   \\",
-    ]
+        # Construct Econchamber Art
+        art = [
+            "  ___   ___   ____         ___         ___            ___   ___  ___",
+            " |     |     |    | |\\  | |    |    | |   | |\\    /| |   | |    |___| ",
+            " |---  | $   |    | | \\ | | ¢  |----| |---| | \\  / | |---  |--- |  \\",
+            " |___  |___  |____| |  \\| |___ |    | |   | |  \\/  | |___| |___ |   \\",
+        ]
+
     
-    # Opening statement
-    opening_statement = "Welcome to the Econchamber! Where economic information and education echos endlessly. \n Please choose an option below:"
+        # Opening statement
+        opening_statement = "Welcome to the Econchamber! Where economic information and education echos endlessly. \n \n Please choose an option below:"
     
-    # Print the artwork in green, then opening statement in green and bold
-    print()
-    for line in art:
-        print(green(line))
-    print()
-    print((bold(green(money))) + (green(opening_statement)))
-    print()
-if __name__ == "__main__":
-    main();
+        # Print the artwork in green, then opening statement in green and bold
+        print()
+        for line in art:
+            print(green(line))
+        print()
+        print(red("\t\t\tBy: RavenTheBird789\n"))
+        print("\t\t\t       v1.2.0\n")
+        print((bold(green(money))) + (green(opening_statement)))
+        print()
+        func();
+    return wrapper
 
 # Options displayed in green
+@main
 def options():
     opts = [
         "            $ Options             ",
@@ -103,34 +100,34 @@ def options():
 
     # Handles user choice
     if user_choice == '1':
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         econ_def();
         time.sleep(1);
         user_prompt();
     elif user_choice == '2':
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         tax_rate.tax_rate();
         user_prompt();
     elif user_choice == '3':
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         taxsystems.list();
         user_prompt();
     elif user_choice == '4':
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         econsystems.list();
         user_prompt();
     elif user_choice == '5':
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         US_Debt_Clock.main();
         user_prompt();
     elif user_choice == '6':
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         print(green("Thank you for visiting the Econchamber! Goodbye!"));
         time.sleep(5);
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         os.close(fd=0);
     else:
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         print(green("Invalid choice. Please try again in: "));
         time.sleep(1);
         print(green("...3"))
@@ -139,6 +136,6 @@ def options():
         time.sleep(1);
         print(green("...1"))
         time.sleep(1);
-        os.system('clear');
+        os.system("cls" if os.name == 'nt' else 'clear');
         options(); # Message displayed to user if they enter an invalid choice and returns them to the main screen
 options();
