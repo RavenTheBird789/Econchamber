@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Econchamber Source Code
 import os
 import time
